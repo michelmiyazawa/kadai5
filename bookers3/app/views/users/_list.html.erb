@@ -45,11 +45,11 @@
             <%= form_with model:book, local:true do |f| %>
             <div class="field row">
               <label for="book_title">Title</label>
-              <div class="col-xs-12 book_title"><%= f.text_field :title %></div>
+              <%= f.text_field :title, class: "col-xs-12 book_title" %>
             </div>
             <div class="field row">
               <label for="book_opinion">Opinion</label>
-              <div class="col-xs-12 book_body"><%= f.text_area :body %></div>
+              <%= f.text_area :body, class: "col-xs-12 book_body" %>
             </div>
           <div class="actions row">
             <%= f.submit 'Create Book', class:"btn btn-primary col-xs-12" %>

@@ -26,7 +26,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    @user = current_user#本に紐づくユーザー
+    @user = @book.user#本に紐づくユーザー
   end
 
   def edit
