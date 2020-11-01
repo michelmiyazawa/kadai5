@@ -1,0 +1,9 @@
+<h1>Books#show</h1>
+<p>Find me in app/views/books/show.html.erb</p>
+<%= @book.title %>
+<%= @book.user.name %>
+<li>
+  <% if @post_image.user == current_user %>
+    <%= link_to "削除", book_path(@book), method: :delete %>
+    <% end %>
+  </li>
