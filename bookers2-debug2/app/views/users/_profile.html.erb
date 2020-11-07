@@ -20,6 +20,24 @@
 		<th>introduction</th>
 		<th><%= user.introduction %></th>
 	</tr>
+	<% @user ||= current_user %>
+<div class="stats">
+	<tr>
+	  <th>follows</th>
+  <td>
+	  <a href="<%= following_user_path(@user) %>">
+      <%= @user.followings.count %>
+    </a>
+  </td>
+  <tr>
+  	<th>followers</th>
+    <td>
+      <a href="<%= followers_user_path(@user) %>">
+        <%= @user.followers.count %>
+      </a>
+    </td>
+  </tr>
+</div>
 </table>
 
 <div class="row">
